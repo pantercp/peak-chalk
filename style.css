@@ -13,10 +13,13 @@ html {
 :root {
     --text: #000;
     --background: #fff;
+    --peak-g: #618C4C;
+    --peak-p: #673065;
+    --peak-w: #FDFFFC;
 }
 
 body {
-    background-color: var(--background);
+    background-color: var(--peak-w);
     color: var(--text);
 }
 
@@ -38,6 +41,32 @@ a:active {
     --step-5: clamp(2.80rem, calc(0.47rem + 11.64vw), 9.49rem);
 }
 
+/* -------Navigation------- */
+
+.nav-container nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: transparent;
+    top: 0;
+    z-index: 999;
+    /* box-shadow: 0px 2px rgba(0, 0, 0, .1); */
+}
+
+.nav-container img{
+    max-width: 80px;
+}
+
+.nav-container ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav-container li{
+    margin: 0 1rem;
+}
 
 /* -----Hero Section------ */
 
@@ -59,6 +88,23 @@ a:active {
     font-size: var(--step-3);
 }
 
+/* -----Mission Section------ */
+
+.mission-section{
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin-inline: auto;
+    text-align: center;
+}
+.mission-section h2{
+    margin: 1rem 0;
+    font-size: var(--step-3);
+}
+.mission-section h3{
+    margin: 1rem 0;
+    font-size: var(--step-0);
+    line-height: 1.4;
+}
 
 
 @media only screen and (max-width: 750px) {

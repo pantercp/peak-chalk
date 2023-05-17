@@ -43,7 +43,7 @@ a:active {
 
 /* -------Navigation------- */
 
-.nav-container nav{
+.nav-container nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -55,18 +55,83 @@ a:active {
     /* box-shadow: 0px 2px rgba(0, 0, 0, .1); */
 }
 
-.nav-container img{
+.nav-container img {
     max-width: 80px;
 }
 
-.nav-container ul{
+.nav-container ul {
     display: flex;
     list-style: none;
 }
 
-.nav-container li{
+.nav-container li {
     margin: 0 1rem;
 }
+
+
+
+/* ---------Burger icon--------- */
+
+.menu-btn {
+    display: none;
+    padding: 25px 10px 25px 0px;
+    border-radius: 0.25rem;
+    margin: 0 1rem;
+    width: 60px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 255, 252, 0.2);
+    border: 2px solid rgb(253, 255, 252, 0.2);
+}
+
+.menu-btn__burger {
+    width: 20px;
+    height: 3px;
+    background: var(--text);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: var(--text);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-9px);
+    width: 30px;
+}
+
+.menu-btn__burger::after {
+    transform: translateY(9px);
+    width: 30px;
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(0px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(-135deg) translate(0, 0);
+    width: 30px;
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(135deg) translate(0, 0);
+    width: 30px;
+}
+
 
 /* -----Hero Section------ */
 
@@ -90,17 +155,19 @@ a:active {
 
 /* -----Mission Section------ */
 
-.mission-section{
+.mission-section {
     padding: 2rem 1rem;
     max-width: 600px;
     margin-inline: auto;
     text-align: center;
 }
-.mission-section h2{
+
+.mission-section h2 {
     margin: 1rem 0;
     font-size: var(--step-3);
 }
-.mission-section h3{
+
+.mission-section h3 {
     margin: 1rem 0;
     font-size: var(--step-0);
     line-height: 1.4;
@@ -108,6 +175,15 @@ a:active {
 
 
 @media only screen and (max-width: 750px) {
+
+    .list-container {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+
+    }
 
     .hero-section {
         background-image: url(images/peak-district-1.jpg);
@@ -122,5 +198,6 @@ a:active {
         font-size: var(--step-2);
         right: 0;
     }
+
 
 }

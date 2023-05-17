@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* font-size: calc(15px + 0.390625vw); */
+}
+
+:root {
+    --text: #000;
+    --background: #fff;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+:root {
+    --step--2: clamp(0.56rem, calc(0.86rem + -0.39vw), 0.78rem);
+    --step--1: clamp(0.83rem, calc(0.97rem + -0.18vw), 0.94rem);
+    --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --step-1: clamp(1.35rem, calc(1.17rem + 0.91vw), 1.88rem);
+    --step-2: clamp(1.62rem, calc(1.21rem + 2.07vw), 2.81rem);
+    --step-3: clamp(1.94rem, calc(1.15rem + 3.96vw), 4.22rem);
+    --step-4: clamp(2.33rem, calc(0.94rem + 6.95vw), 6.33rem);
+    --step-5: clamp(2.80rem, calc(0.47rem + 11.64vw), 9.49rem);
+}
+
+
+/* -----Hero Section------ */
+
+.hero-section {
+    background-image: url(images/peak-district-2.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position: 50% 50%;
+    height: 600px;
+    position: relative;
+}
+
+.hero-section h1 {
+    position: absolute;
+    bottom: 40%;
+    max-width: min(600px, 60vw);
+    margin: 1rem;
+    color: #fff;
+    font-size: var(--step-3);
+}
+
+
+
+@media only screen and (max-width: 750px) {
+
+    .hero-section {
+        background-image: url(images/peak-district-1.jpg);
+        background-position: 70% 50%;
+    }
+
+    .hero-section h1 {
+        bottom: 1%;
+        max-width: min(401px, 70vw);
+        margin: 1rem;
+        color: #fff;
+        font-size: var(--step-2);
+        right: 0;
+    }
+
+}

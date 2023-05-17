@@ -173,6 +173,31 @@ a:active {
     line-height: 1.4;
 }
 
+/* -----Sustainable Section------ */
+
+.sustainable-section {
+    display: flex;
+    background-color: var(--peak-g);
+}
+
+.sustainable-section .image-box,
+.text-box {
+    width: 50%;
+}
+
+.sustainable-section .text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.sustainable-section .image-box img {
+    max-width: 100%;
+}
+
+
+
 
 @media only screen and (max-width: 750px) {
 
@@ -197,6 +222,15 @@ a:active {
         color: #fff;
         font-size: var(--step-2);
         right: 0;
+    }
+
+    .sustainable-section {
+        flex-wrap: wrap;
+    }
+
+    .sustainable-section .image-box,
+    .text-box {
+        width: 100%;
     }
 
 

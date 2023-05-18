@@ -68,6 +68,10 @@ a:active {
     margin: 0 1rem;
 }
 
+.list-container .socials{
+    display: flex;
+}
+
 
 
 /* ---------Burger icon--------- */
@@ -91,7 +95,7 @@ a:active {
     background: var(--text);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-    transition: all .5s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 .menu-btn__burger::before,
@@ -102,7 +106,7 @@ a:active {
     background: var(--text);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
-    transition: all .5s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 
 .menu-btn__burger::before {
@@ -177,7 +181,7 @@ a:active {
 
 .sustainable-section {
     display: flex;
-    background-color: var(--peak-g);
+    /* background-color: var(--peak-g); */
 }
 
 .sustainable-section .image-box,
@@ -193,21 +197,72 @@ a:active {
 }
 
 .sustainable-section .image-box img {
-    max-width: 100%;
+    max-width: min(375px, 80%);
+    margin: 0 1rem;
+    border-radius: 1rem;
+}
+
+.sustainable-section .image-box h4 {
+    background-color: var(--peak-g);
+    max-width: min(300px, 70%);
+    margin-inline: auto;
+    color: var(--peak-w);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    position: relative;
+    top: -50px;
+}
+
+.sustainable-section .image-box {
+    text-align: center;
+    position: relative;
 }
 
 
 
 
 @media only screen and (max-width: 750px) {
+    
+    .menu-btn {
+        display: flex;
+
+    }
 
     .list-container {
         display: none;
     }
 
-    .menu-btn {
-        display: flex;
+    .nav-bar.open .list-container {
+        display: block;
+        position: absolute;
+        right: 16px;
+        top: 70px;
+    }
 
+    .nav-bar.open ul {
+        flex-direction: column;
+        background-color: rgb(253, 255, 252, 0.8);
+        border: 3px solid rgb(253, 255, 252, 0.8);
+        border-radius: 1rem;
+    }
+
+    .nav-bar.open li {
+        border-top: 3px solid rgb(253, 255, 252, 0.8);
+    }
+
+    .nav-bar.open li.top {
+        border-top: none;
+    }
+
+
+    .nav-bar.open li {
+        margin: 0;
+        padding: 0.1rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .nav-bar.open .socials li {
+        width: 50%;
     }
 
     .hero-section {

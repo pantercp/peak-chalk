@@ -55,7 +55,7 @@ a:active {
     transition: all 0.25s ease-in;
 }
 
-#header.nav-scrolled{
+#header.nav-scrolled {
     background-color: #fff;
     box-shadow: 0px 2px rgba(0, 0, 0, .1);
 }
@@ -73,7 +73,7 @@ a:active {
     margin: 0 1rem;
 }
 
-.list-container .socials{
+.list-container .socials {
     display: flex;
 }
 
@@ -85,7 +85,7 @@ a:active {
     display: none;
     padding: 25px 10px 25px 0px;
     border-radius: 0.25rem;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     width: 60px;
     height: 40px;
     justify-content: center;
@@ -227,28 +227,31 @@ a:active {
 
 
 @media only screen and (max-width: 750px) {
-    
+
+    /* ------Burger and Drop Menu------ */
+
     .menu-btn {
         display: flex;
-
     }
 
     .list-container {
-        display: none;
+        position: absolute;
+        right: -130px;
+        top: 70px;
+        transition: all 0.5s ease-in;
     }
 
     .nav-bar.open .list-container {
         display: block;
-        position: absolute;
-        right: 16px;
-        top: 70px;
+        right: 7px;
     }
 
-    .nav-bar.open ul {
+    .nav-bar ul {
         flex-direction: column;
         background-color: rgb(253, 255, 252, 0.8);
         border: 3px solid rgb(253, 255, 252, 0.8);
         border-radius: 1rem;
+        transition: all 0.5s ease-in;
     }
 
     .nav-bar.open li {
@@ -259,16 +262,35 @@ a:active {
         border-top: none;
     }
 
-
-    .nav-bar.open li {
+    .nav-bar li {
         margin: 0;
         padding: 0.1rem 1rem;
         font-size: 1.5rem;
+        transition: all 0.5s ease-in;
     }
 
     .nav-bar.open .socials li {
         width: 50%;
     }
+
+    /* -------Drop Menu on Scroll------- */
+
+    #header.nav-scrolled.nav-bar.open .list-container {
+        right: 2px;
+        top: 86px;
+    }
+
+    #header.nav-scrolled.nav-bar.open ul {
+        flex-direction: column;
+        background-color: #fff;
+        border: 3px solid #000;
+        border-radius: 0.2rem;
+    }
+
+    #header.nav-scrolled.nav-bar.open li {
+        padding: 0.2rem 1rem;
+    }
+
 
     .hero-section {
         background-image: url(images/peak-district-1.jpg);

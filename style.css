@@ -226,6 +226,61 @@ a:active {
 
 
 
+.footer-container{
+    margin: 2rem 0 0 0;
+    padding: 2rem 1rem;
+    background-color: #bab7b7;
+}
+
+.company-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #000;
+}
+
+.footer-container img{
+    max-height: min(125px,23vh);
+}
+
+.company-container .contain-info{
+    padding: 1rem;
+}
+
+.company-container .contain-logo{
+    width: 200px;
+    text-align: center;
+}
+
+.company-container .contain-info h3{
+    margin-bottom: 0.25rem;
+    font-size: var(--step-1);
+}
+
+.company-container .contain-info p.company{
+    font-size: 0.8rem;
+}
+
+.company-container .contain-social{
+    padding: 1rem;
+}
+
+.company-container .contain-social h3{
+    margin-bottom: 0.25rem;
+    font-size: var(--step-1);
+}
+
+.company-container .contain-social p{
+    margin: 0.25rem 0;
+}
+
+.company-container .contain-social i{
+    margin-right: 1rem;
+}
+
+
+
 @media only screen and (max-width: 750px) {
 
     /* ------Burger and Drop Menu------ */

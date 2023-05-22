@@ -142,6 +142,45 @@ a:active {
 }
 
 
+/* ------Buttons------- */
+
+button{
+    padding: 0.25rem 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--peak-w);
+    border: 2px solid var(--peak-w);
+    margin: 1rem;
+    transition: all 0.25s ease-in;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: var(--peak-w);
+    font-size: 1.2rem;
+    color: var(--peak-p);
+}
+
+button.light{
+    padding: 0.25rem 0.5rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: var(--peak-g);
+    border: 2px solid var(--peak-g);
+    margin: 1rem;
+    transition: all 0.25s ease-in;
+}
+
+button.light:hover{
+    cursor: pointer;
+    background-color: var(--peak-g);
+    font-size: 1.2rem;
+    color: var(--peak-w);
+}
+
+
 /* -----Hero Section------ */
 
 .hero-section {
@@ -149,7 +188,7 @@ a:active {
     background-size: cover;
     width: 100%;
     background-position: 50% 50%;
-    height: 600px;
+    height: min(100vh, 700px);
     position: relative;
 }
 
@@ -180,6 +219,36 @@ a:active {
     margin: 1rem 0;
     font-size: var(--step-0);
     line-height: 1.4;
+}
+
+/* -----Trillion Tree Section------ */
+
+.tree-section{
+    position: relative;
+}
+
+.tree-container{
+    background-image: url(images/peaked.jpg);
+    height: min(80vh, 600px);
+    background-position: 38% 50%;
+    background-size: cover;
+}
+
+.tree-section .text-container{
+    position: absolute;
+    top: 30%;
+    color: var(--peak-w);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tree-section h4{
+    font-size: var(--step-3);
+    margin: 0 1rem;
+    text-align: center;
+    max-width: 600px;
 }
 
 /* --------Values-------- */
@@ -218,54 +287,15 @@ a:active {
     margin: 2rem auto;
     max-width: 800px;
 }
-
+/* 
 .section-values button{
     background-color: var(--peak-g);
     color: var(--peak-w);
     padding: 0.25rem 0.5rem;
     border-radius: 0.5rem;
-}
+} */
 
-/* -----Sustainable Section------ */
 
-.sustainable-section {
-    display: flex;
-    /* background-color: var(--peak-g); */
-}
-
-.sustainable-section .image-box,
-.text-box {
-    width: 50%;
-}
-
-.sustainable-section .text-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.sustainable-section .image-box img {
-    max-width: min(375px, 80%);
-    margin: 0 1rem;
-    border-radius: 1rem;
-}
-
-.sustainable-section .image-box h4 {
-    background-color: var(--peak-g);
-    max-width: min(300px, 70%);
-    margin-inline: auto;
-    color: var(--peak-w);
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    position: relative;
-    top: -50px;
-}
-
-.sustainable-section .image-box {
-    text-align: center;
-    position: relative;
-}
 
 /* -------Footer------- */
 

@@ -230,6 +230,7 @@ button.light:hover{
 .tree-container{
     background-image: url(images/peaked.jpg);
     height: min(80vh, 600px);
+    min-height: 340px;
     background-position: 38% 50%;
     background-size: cover;
 }
@@ -293,6 +294,7 @@ button.light:hover{
 .section-values p{
     margin: 2rem auto;
     max-width: 800px;
+    font-size: 1.2rem;
 }
 /* 
 .section-values button{
@@ -524,6 +526,10 @@ button.light:hover{
 
 @media only screen and (max-width: 550px) {
 
+    .section-values{
+        margin: 0;
+    }
+
     .contain-values{
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -533,8 +539,16 @@ button.light:hover{
         padding: 1rem;
     }
 
+    .section-values p{
+        font-size: 1rem;
+    }
+
     .contain-values h4{
         font-size: var(--step-0);
+    }
+
+    .section-values h2 {
+        margin: 0;
     }
 
 }

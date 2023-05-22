@@ -256,21 +256,28 @@ button.light:hover{
 .section-values {
     text-align: center;
     padding: 2rem 1rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
+    color: var(--peak-g);
 }
 
 .section-values h2{
     font-size: var(--step-3);
+    margin: 0 1rem 2rem;
 }
 
 .contain-values {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    max-width: 800px;
+    margin-inline: auto;
 }
 
 .contain-values i{
     font-size: var(--step-3);
+    padding: 2rem;
+    border: 3px solid var(--peak-g);
+    border-radius: 50%;
 }
 
 .contain-values h4{
@@ -496,7 +503,7 @@ button.light:hover{
     }
 
     .hero-section h1 {
-        bottom: 1%;
+        bottom: 7%;
         max-width: min(401px, 70vw);
         margin: 1rem;
         color: #fff;
@@ -513,5 +520,21 @@ button.light:hover{
         width: 100%;
     }
 
+}
+
+@media only screen and (max-width: 550px) {
+
+    .contain-values{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .contain-values i{
+        padding: 1rem;
+    }
+
+    .contain-values h4{
+        font-size: var(--step-0);
+    }
 
 }

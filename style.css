@@ -31,7 +31,7 @@ a:active {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     cursor: pointer;
 }
 
@@ -149,7 +149,7 @@ a:hover{
 
 /* ------Buttons------- */
 
-button{
+button {
     padding: 0.25rem 0.5rem;
     font-size: 1.1rem;
     border-radius: 0.5rem;
@@ -160,14 +160,14 @@ button{
     transition: all 0.25s ease-in;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
     background-color: var(--peak-w);
     font-size: 1.2rem;
     color: var(--peak-p);
 }
 
-button.light{
+button.light {
     padding: 0.25rem 0.5rem;
     font-size: 1.1rem;
     border-radius: 0.5rem;
@@ -178,7 +178,7 @@ button.light{
     transition: all 0.25s ease-in;
 }
 
-button.light:hover{
+button.light:hover {
     cursor: pointer;
     background-color: var(--peak-g);
     font-size: 1.2rem;
@@ -240,11 +240,11 @@ button.light:hover{
 
 /* -----Trillion Tree Section------ */
 
-.tree-section{
+.tree-section {
     position: relative;
 }
 
-.tree-container{
+.tree-container {
     background-image: url(images/peaked.jpg);
     height: min(80vh, 600px);
     min-height: 340px;
@@ -252,7 +252,7 @@ button.light:hover{
     background-size: cover;
 }
 
-.tree-section .text-container{
+.tree-section .text-container {
     position: absolute;
     top: 30%;
     color: var(--peak-w);
@@ -262,7 +262,7 @@ button.light:hover{
     width: 100%;
 }
 
-.tree-section h4{
+.tree-section h4 {
     font-size: var(--step-3);
     margin: 0 1rem;
     text-align: center;
@@ -278,7 +278,7 @@ button.light:hover{
     color: var(--peak-g);
 }
 
-.section-values h2{
+.section-values h2 {
     font-size: var(--step-3);
     margin: 0 1rem 2rem;
 }
@@ -291,14 +291,14 @@ button.light:hover{
     margin-inline: auto;
 }
 
-.contain-values i{
+.contain-values i {
     font-size: var(--step-3);
     padding: 2rem;
     border: 3px solid var(--peak-g);
     border-radius: 50%;
 }
 
-.contain-values h4{
+.contain-values h4 {
     font-size: var(--step-1);
 }
 
@@ -308,7 +308,7 @@ button.light:hover{
     margin: 0 0.5rem;
 }
 
-.section-values p{
+.section-values p {
     margin: 2rem auto;
     max-width: 800px;
     font-size: 1.2rem;
@@ -317,11 +317,11 @@ button.light:hover{
 
 /* -----Trillion Tree Section------ */
 
-.product-section{
+.product-section {
     position: relative;
 }
 
-.product-container{
+.product-container {
     background-image: url(images/fine.jpg);
     height: min(50vh, 500px);
     min-height: 500px;
@@ -329,7 +329,7 @@ button.light:hover{
     background-size: cover;
 }
 
-.product-section .text-container{
+.product-section .text-container {
     position: absolute;
     top: 27%;
     color: var(--peak-w);
@@ -339,7 +339,7 @@ button.light:hover{
     width: 100%;
 }
 
-.product-section .text-content{
+.product-section .text-content {
     text-align: center;
     padding: 1rem;
     background-color: #0007;
@@ -347,8 +347,8 @@ button.light:hover{
     border: 2px solid var(--peak-w);
 }
 
-.product-section h4{
-    font-size: var(--step-3);
+.product-section h4 {
+    font-size: var(--step-2);
     margin: 0 1rem;
     text-align: center;
     max-width: 600px;
@@ -356,12 +356,59 @@ button.light:hover{
     margin-bottom: 0.5rem;
 }
 
-.product-section h5{
-    font-size: var(--step-2);
+.product-section h5 {
+    font-size: var(--step-1);
     margin: 0 1rem;
     text-align: center;
     max-width: 600px;
 }
+
+/* -------About Section------ */
+
+.about-section {
+    margin: 2rem 0;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.about-section .text-container {
+    padding: 1rem;
+    text-align: center;
+    width: min(50%, 500px);
+}
+
+.about-section .image-container {
+    width: min(50%, 500px);
+    text-align: center;
+    padding: 1rem;
+    min-width: 375px;
+}
+
+.about-section .text-container h3 {
+    font-size: var(--step-2);
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.about-section .text-container p {
+    text-align: justify;
+}
+
+.about-section .image-container img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid #000;
+    box-shadow: 0.3rem 0.3em 0.5rem rgb(23, 42, 58, 0.7);
+
+}
+
 
 
 /* -------Footer------- */
@@ -580,28 +627,44 @@ button.light:hover{
         width: 100%;
     }
 
+    /* -----About Section----- */
+
+    .about-container {
+        flex-wrap: wrap;
+    }
+
+    .about-section .image-container {
+        width: 100%;
+        min-width: 100px;
+    }
+
+    .about-section .text-container {
+        width: 100%;
+        max-width: 600px;
+    }
+
 }
 
 @media only screen and (max-width: 550px) {
 
-    .section-values{
+    .section-values {
         margin: 0;
     }
 
-    .contain-values{
+    .contain-values {
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
 
-    .contain-values i{
+    .contain-values i {
         padding: 1rem;
     }
 
-    .section-values p{
+    .section-values p {
         font-size: 1rem;
     }
 
-    .contain-values h4{
+    .contain-values h4 {
         font-size: var(--step-0);
     }
 
@@ -609,7 +672,7 @@ button.light:hover{
         margin: 0;
     }
 
-    .product-section .text-container{
+    .product-section .text-container {
         top: 41%;
     }
 

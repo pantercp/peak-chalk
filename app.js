@@ -16,7 +16,7 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
-// Intersection Animations
+// Intersection For Header
 
 const header = document.querySelector("#header");
 const sectionOne = document.querySelector(".hero-section");
@@ -40,3 +40,28 @@ const sectionOneObserver = new IntersectionObserver(function (
   sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
+
+// Intersection For Fader
+
+const faders = document.querySelectorAll(".fade-in");
+
+const appearOptions = {
+  threshold: 0.3,
+};
+
+const appearOnScroll = new IntersectionObserver
+  (function (entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
+      } else {
+        entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+      }
+    })
+  },
+    appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+})

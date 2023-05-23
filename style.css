@@ -28,6 +28,11 @@ a:visited,
 a:hover,
 a:active {
     color: inherit;
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
 }
 
 :root {
@@ -179,6 +184,18 @@ button.light:hover{
     font-size: 1.2rem;
     color: var(--peak-w);
 }
+
+/* ------Fader Animation----- */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
 
 
 /* -----Hero Section------ */

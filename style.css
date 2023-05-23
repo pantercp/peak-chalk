@@ -381,6 +381,7 @@ button.light:hover {
     padding: 1rem;
     text-align: center;
     width: min(50%, 500px);
+    color: var(--peak-g);
 }
 
 .about-section .image-container {
@@ -392,12 +393,7 @@ button.light:hover {
 
 .about-section .text-container h3 {
     font-size: var(--step-2);
-    text-align: left;
     margin-bottom: 0.5rem;
-}
-
-.about-section .text-container p {
-    text-align: justify;
 }
 
 .about-section .image-container img {

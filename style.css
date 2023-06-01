@@ -39,7 +39,7 @@ a:hover {
     --step--2: clamp(0.56rem, calc(0.86rem + -0.39vw), 0.78rem);
     --step--1: clamp(0.83rem, calc(0.97rem + -0.18vw), 0.94rem);
     --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
-    --step-1: clamp(1.35rem, calc(1.17rem + 0.91vw), 1.88rem);
+    --step-1: clamp(1.35rem, calc(1.17rem + 1.11vw), 1.88rem);
     --step-2: clamp(1.62rem, calc(1.21rem + 2.07vw), 2.81rem);
     --step-3: clamp(1.94rem, calc(1.15rem + 3.96vw), 4.22rem);
     --step-4: clamp(2.33rem, calc(0.94rem + 6.95vw), 6.33rem);
@@ -306,104 +306,10 @@ button.fill-in {
     max-width: 600px;
 }
 
-/* --------Values-------- */
-
-.section-values {
-    text-align: center;
-    padding: 2rem 1rem;
-    margin: 1rem 0;
-    color: var(--peak-g);
-}
-
-.section-values h2 {
-    font-size: var(--step-3);
-    margin: 0 1rem 2rem;
-}
-
-.contain-values {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin-inline: auto;
-}
-
-.contain-values i {
-    font-size: var(--step-3);
-    padding: 2rem;
-    border: 3px solid var(--peak-g);
-    border-radius: 50%;
-}
-
-.contain-values h4 {
-    font-size: var(--step-1);
-}
-
-.value-content {
-    text-align: center;
-    font-size: 2rem;
-    margin: 0 0.5rem;
-}
-
-.section-values p {
-    margin: 2rem auto;
-    max-width: 800px;
-    font-size: 1.2rem;
-}
-
-
-/* -----Trillion Tree Section------ */
-
-.product-section {
-    position: relative;
-}
-
-.product-container {
-    background-image: url(images/fine.jpg);
-    height: min(50vh, 500px);
-    min-height: 500px;
-    background-position: 38% 62%;
-    background-size: cover;
-}
-
-.product-section .text-container {
-    position: absolute;
-    top: 27%;
-    color: var(--peak-w);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.product-section .text-content {
-    text-align: center;
-    padding: 1rem;
-    background-color: #0007;
-    border-radius: 0.5rem;
-    border: 2px solid var(--peak-w);
-}
-
-.product-section h4 {
-    font-size: var(--step-2);
-    margin: 0 1rem;
-    text-align: center;
-    max-width: 600px;
-    text-decoration: underline;
-    margin-bottom: 0.5rem;
-}
-
-.product-section h5 {
-    font-size: var(--step-1);
-    margin: 0 1rem;
-    text-align: center;
-    max-width: 600px;
-}
-
 /* -------About Section------ */
 
 .about-section {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .about-container {
@@ -429,7 +335,7 @@ button.fill-in {
 }
 
 .about-section .text-container h3 {
-    font-size: var(--step-2);
+    font-size: var(--step-3);
     margin-bottom: 0.5rem;
 }
 
@@ -442,9 +348,146 @@ button.fill-in {
 
 }
 
+/* -----Product Section------ */
+
+.product-section {
+    position: relative;
+}
+
+.product-container {
+    background-image: url(images/fine.jpg);
+    position: relative;
+    margin-block: 1rem;
+    /* height: min(50vh, 500px); */
+    min-height: 600px;
+    background-position: 38% 62%;
+    background-size: cover;
+}
+
+.product-section .text-container {
+    position: absolute;
+    top: 47%;
+    left: 5%;
+    color: var(--peak-w);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+}
+
+.product-section .text-content {
+    padding: 1rem;
+    /* background-color: #0007; */
+    border-radius: 0.5rem;
+}
+
+.product-section h4 {
+    font-size: var(--step-3);
+    padding-inline: 1rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    background-color: #0007;
+    /* border: 2px solid var(--peak-w); */
+}
+
+.product-section h4::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: var(--peak-p);
+}
+
+.product-section p{
+    /* border: 1px solid var(--peak-w); */
+    margin-top: 1rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    background-color: #0007;
+    font-size: var(--step-0);
+    max-width: 900px;
+    text-align: justify;
+}
+
+.product-section p::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 0;
+    top: 0;
+    display: block;
+    background: var(--peak-p);
+}
+
+@media only screen and (max-width: 650px) {
+
+    .product-container{
+        background-position: 46% 62%;
+    }
+    .product-section .text-container {
+        top: 51%;
+        left: 2%;
+    }
+
+}
+
+
+/* --------Values-------- */
+
+.section-values {
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: var(--peak-g);
+}
+
+.section-values h2 {
+    font-size: var(--step-3);
+    margin: 0 1rem 2rem;
+}
+
+.contain-values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin-inline: auto;
+}
+
+.contain-values i {
+    font-size: var(--step-2);
+    padding: 1rem;
+    border: 3px solid var(--peak-g);
+    border-radius: 50%;
+}
+
+.contain-values h4 {
+    font-size: var(--step-1);
+}
+
+.value-content {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0.5rem;
+}
+
+.section-values p {
+    margin: 2rem auto;
+    max-width: 800px;
+    font-size: 1.2rem;
+}
+
+
 /* -------Testimonials------- */
 
 .section-testimonials {
+    margin-block: 2rem;
     position: relative;
     height: 100vh;
 }
@@ -452,22 +495,18 @@ button.fill-in {
 .section-testimonials h2{
     font-size: var(--step-3);
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     color: var(--peak-g);
 }
 
 .wrapper {
     background-color: #fff;
-    /* position: absolute; */
     position: relative;
     margin: 2rem auto;
     width: 80vw;
     max-width: 41em;
     min-height: 25em;
     border-radius: 0.6em;
-    /* transform: translate(-50%, -50%); */
-    /* left: 50%; */
-    /* top: 40%; */
     box-shadow: 0.5em 1.8em 2.8em rgba(1, 17, 39, 0.35);
     display: flex;
     border: 1px solid rgba(1, 17, 39, 0.25);
@@ -794,10 +833,6 @@ button#prev {
         flex-wrap: wrap;
     }
 
-    .contain-values i {
-        padding: 1rem;
-    }
-
     .section-values p {
         font-size: 1rem;
     }
@@ -808,10 +843,6 @@ button#prev {
 
     .section-values h2 {
         margin: 0;
-    }
-
-    .product-section .text-container {
-        top: 41%;
     }
 
 }

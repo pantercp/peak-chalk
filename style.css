@@ -37,7 +37,7 @@ a:hover {
 
 :root {
     --step--2: clamp(0.56rem, calc(0.86rem + -0.39vw), 0.78rem);
-    --step--1: clamp(0.83rem, calc(0.97rem + -0.18vw), 0.94rem);
+    --step--1: clamp(0.83rem, calc(0.97rem + 0.18vw), 0.94rem);
     --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
     --step-1: clamp(1.35rem, calc(1.17rem + 1.11vw), 1.88rem);
     --step-2: clamp(1.62rem, calc(1.21rem + 2.07vw), 2.81rem);
@@ -168,45 +168,11 @@ a:hover {
 
 /* ------Buttons------- */
 
-button {
-    padding: 0.25rem 0.5rem;
-    font-size: 1.1rem;
-    border-radius: 0.5rem;
-    background-color: transparent;
-    color: var(--peak-w);
-    border: 2px solid var(--peak-w);
-    margin: 1rem;
-    transition: all 0.25s ease-in;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: var(--peak-w);
-    font-size: 1.2rem;
-    color: var(--peak-p);
-}
-
-button.light {
-    padding: 0.25rem 0.5rem;
-    font-size: 1.1rem;
-    border-radius: 0.5rem;
-    background-color: transparent;
-    color: var(--peak-g);
-    border: 2px solid var(--peak-g);
-    margin: 1rem;
-    transition: all 0.25s ease-in;
-}
-
-button.light:hover {
-    cursor: pointer;
-    background-color: var(--peak-g);
-    font-size: 1.2rem;
-    color: var(--peak-w);
-}
 
 button.fill-in {
     color: var(--peak-g);
-    background-color: var(--peak-w);
+    font-size: 1.1rem;
+    background-color: transparent;
     border: 2px solid var(--peak-g);
     transition: all 0.35s ease-in;
     border-radius: 0;
@@ -214,9 +180,32 @@ button.fill-in {
 
     &:hover,
     &:focus {
+        cursor: pointer;
         box-shadow: inset 0 0 0 2em var(--peak-g);
         color: var(--peak-w);
-        font-size: 1.1rem;
+    }
+}
+
+button.fill-in.light {
+    color: var(--peak-w);
+    border: 2px solid var(--peak-w);
+
+    &:hover,
+    &:focus {
+        box-shadow: inset 0 0 0 2em var(--peak-w);
+        color: var(--peak-g);
+    }
+}
+
+button.fill-in.purple {
+    color: var(--peak-p);
+    background-color: var(--peak-w);
+    border: 2px solid var(--peak-p);
+
+    &:hover,
+    &:focus {
+        box-shadow: inset 0 0 0 2em var(--peak-p);
+        color: var(--peak-w);
     }
 }
 
@@ -291,7 +280,7 @@ button.fill-in {
 
 .tree-section .text-container {
     position: absolute;
-    top: 30%;
+    top: 25%;
     color: var(--peak-w);
     display: flex;
     flex-direction: column;
@@ -301,7 +290,7 @@ button.fill-in {
 
 .tree-section h4 {
     font-size: var(--step-3);
-    margin: 0 1rem;
+    margin: 1rem;
     text-align: center;
     max-width: 600px;
 }
@@ -318,6 +307,10 @@ button.fill-in {
     align-items: center;
     max-width: 1000px;
     margin-inline: auto;
+}
+
+.about-container p{
+    margin-bottom: 1rem;
 }
 
 .about-section .text-container {
@@ -358,38 +351,32 @@ button.fill-in {
     background-image: url(images/fine.jpg);
     position: relative;
     margin-block: 1rem;
-    /* height: min(50vh, 500px); */
-    min-height: 600px;
-    background-position: 38% 62%;
+    min-height: 500px;
+    background-position: 45% 42%;
     background-size: cover;
 }
 
 .product-section .text-container {
     position: absolute;
-    top: 47%;
-    left: 5%;
+    top: 46%;
+    left: 10%;
     color: var(--peak-w);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 90%;
+    max-width: min(96%, 400px);
 }
 
 .product-section .text-content {
     padding: 1rem;
-    /* background-color: #0007; */
     border-radius: 0.5rem;
 }
 
 .product-section h4 {
-    font-size: var(--step-3);
+    font-size: var(--step-2);
     padding-inline: 1rem;
     padding-bottom: 0.5rem;
     position: relative;
     display: inline-block;
     text-align: left;
     background-color: #0007;
-    /* border: 2px solid var(--peak-w); */
 }
 
 .product-section h4::before {
@@ -404,12 +391,11 @@ button.fill-in {
 }
 
 .product-section p{
-    /* border: 1px solid var(--peak-w); */
     margin-top: 1rem;
     position: relative;
     padding: 0.5rem 1rem;
     background-color: #0007;
-    font-size: var(--step-0);
+    font-size: var(--step--1);
     max-width: 900px;
     text-align: justify;
 }
@@ -425,7 +411,13 @@ button.fill-in {
     background: var(--peak-p);
 }
 
-@media only screen and (max-width: 650px) {
+.product-section button{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 750px) {
 
     .product-container{
         background-position: 46% 62%;
@@ -489,7 +481,6 @@ button.fill-in {
 .section-testimonials {
     margin-block: 2rem;
     position: relative;
-    height: 100vh;
 }
 
 .section-testimonials h2{

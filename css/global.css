@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* font-size: calc(15px + 0.390625vw); */
+}
+
+:root {
+    --text: #000;
+    --background: #fff;
+    --peak-g: #618C4C;
+    --peak-p: #673065;
+    --peak-w: #FDFFFC;
+}
+
+body {
+    background-color: var(--peak-w);
+    color: var(--text);
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+:root {
+    --step--2: clamp(0.56rem, calc(0.86rem + -0.39vw), 0.78rem);
+    --step--1: clamp(0.83rem, calc(0.97rem + 0.18vw), 0.94rem);
+    --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --step-1: clamp(1.35rem, calc(1.17rem + 1.11vw), 1.88rem);
+    --step-2: clamp(1.62rem, calc(1.21rem + 2.07vw), 2.81rem);
+    --step-3: clamp(1.94rem, calc(1.15rem + 3.96vw), 4.22rem);
+    --step-4: clamp(2.33rem, calc(0.94rem + 6.95vw), 6.33rem);
+    --step-5: clamp(2.80rem, calc(0.47rem + 11.64vw), 9.49rem);
+}
+
+/* -------Navigation------- */
+
+.nav-container nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: transparent;
+    top: 0;
+    z-index: 999;
+    transition: all 0.25s ease-in;
+}
+
+#header.nav-scrolled {
+    background-color: #fff;
+    box-shadow: 0px 2px rgba(0, 0, 0, .1);
+}
+
+.nav-container img {
+    max-width: 80px;
+}
+
+.nav-container ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-container li {
+    margin: 0 1rem;
+}
+
+.nav-container li.page::after {
+    content: '';
+    background: var(--peak-g);
+    width: 0;
+    height: 2px;
+    display: block;
+    bottom: -9px;
+    position: relative;
+    transition: all 0.25s ease-in;
+}
+
+.nav-container li.page:hover::after {
+    width: 100%;
+}
+
+.list-container .socials {
+    display: flex;
+}
+
+.list-container .socials i:hover {
+    color: var(--peak-g);
+}
+
+
+
+/* ---------Burger icon--------- */
+
+.menu-btn {
+    display: none;
+    padding: 25px 10px 25px 0px;
+    border-radius: 0.25rem;
+    margin: 0 0.5rem;
+    width: 60px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 255, 252, 0.2);
+    border: 2px solid rgb(253, 255, 252, 0.2);
+}
+
+.menu-btn__burger {
+    width: 20px;
+    height: 3px;
+    background: var(--text);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .25s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: var(--text);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .25s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-9px);
+    width: 30px;
+}
+
+.menu-btn__burger::after {
+    transform: translateY(9px);
+    width: 30px;
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(0px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(-135deg) translate(0, 0);
+    width: 30px;
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(135deg) translate(0, 0);
+    width: 30px;
+}
+
+
+/* ------Buttons------- */
+
+
+button.fill-in {
+    color: var(--peak-g);
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: 2px solid var(--peak-g);
+    transition: all 0.35s ease-in;
+    border-radius: 0;
+    padding: 0.5rem 1rem;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        box-shadow: inset 0 0 0 2em var(--peak-g);
+        color: var(--peak-w);
+    }
+}
+
+button.fill-in.light {
+    color: var(--peak-w);
+    border: 2px solid var(--peak-w);
+
+    &:hover,
+    &:focus {
+        box-shadow: inset 0 0 0 2em var(--peak-w);
+        color: var(--peak-g);
+    }
+}
+
+button.fill-in.purple {
+    color: var(--peak-p);
+    background-color: var(--peak-w);
+    border: 2px solid var(--peak-p);
+
+    &:hover,
+    &:focus {
+        box-shadow: inset 0 0 0 2em var(--peak-p);
+        color: var(--peak-w);
+    }
+}
+
+
+
+/* ------Fader Animation----- */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+
+
+/* -------Footer------- */
+
+.footer-container {
+    margin: 0 0 0 0;
+    padding: 1rem;
+    background-color: #bab7b7;
+}
+
+.company-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #000;
+}
+
+.company-container .contain-logo {
+    height: 200px;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.footer-container img {
+    height: 100%;
+}
+
+.company-container .contain-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.company-container .contain-info p {
+    margin: 0.25rem 0;
+}
+
+.company-container .contain-info i {
+    margin: 0.25rem 0.75rem;
+    font-size: 1.5rem;
+}
+
+
+.company-container .contain-info h3 {
+    margin: 0.7rem 0 0;
+    font-size: 1.2rem;
+}
+
+.company-container .contain-info p.company {
+    font-size: 0.8rem;
+}
+
+/* -----CJPixel Footer------ */
+
+
+.container-footer a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #1301aa;
+}
+
+.footer-about p {
+    max-width: 200px;
+    min-width: 115px;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+.container-footer i {
+    font-size: 1.4em;
+    margin: 10px;
+    color: #1301aa;
+}
+
+.contain-links {
+    text-align: center;
+}
+
+.footer-cjpixel-about .contain-logo {
+    width: 110px;
+    height: 110px;
+    margin: 10px;
+    padding: 13px 10px 10px 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #000;
+}
+
+.footer-cjpixel-about img {
+    width: 100%;
+}
+
+.footer-about {
+    padding: 10px;
+    position: relative;
+}
+
+.footer-about::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 80%;
+    top: 12px;
+    left: -2px;
+    background: #000;
+}
+
+.contain-cjpixel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.cjpixel-content .contain-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-inline: auto;
+    font-size: 1.3rem;
+}
+
+.cjpixel-content a {
+    font-size: 1em;
+}
+
+
+
+
+@media only screen and (max-width: 750px) {
+
+    /* ------Burger and Drop Menu------ */
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .list-container {
+        position: absolute;
+        right: -130px;
+        top: 70px;
+        transition: all 0.5s ease-in;
+    }
+
+    .nav-bar.open .list-container {
+        display: block;
+        right: 7px;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        background-color: rgb(253, 255, 252, 0.8);
+        border: 3px solid rgb(253, 255, 252, 0.8);
+        border-radius: 1rem;
+        transition: all 0.5s ease-in;
+    }
+
+    .nav-bar.open li {
+        border-top: 3px solid rgb(253, 255, 252, 0.8);
+    }
+
+    .nav-bar.open li.top {
+        border-top: none;
+    }
+
+    .nav-bar li {
+        margin: 0;
+        padding: 0.1rem 1rem;
+        font-size: 1.5rem;
+        transition: all 0.5s ease-in;
+    }
+
+    .nav-bar.open .socials li {
+        width: 50%;
+    }
+
+
+    .nav-container li.page:hover::after {
+        width: 0;
+    }
+
+
+    /* -------Drop Menu on Scroll------- */
+
+    #header.nav-scrolled.nav-bar.open .list-container {
+        right: 2px;
+        top: 86px;
+    }
+
+    #header.nav-scrolled.nav-bar.open ul {
+        flex-direction: column;
+        background-color: #fff;
+        border: 3px solid #000;
+        border-radius: 0.2rem;
+    }
+
+    #header.nav-scrolled.nav-bar.open li {
+        padding: 0.2rem 1rem;
+    }
+
+}

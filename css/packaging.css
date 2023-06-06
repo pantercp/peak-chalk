@@ -66,18 +66,12 @@
 
 @media only screen and (max-width: 500px) {
 
-    .hero-section {
-        /* background-position: 70% 50%; */
-    }
 
     .hero-section {
         background-position: 67% 50%;
         height: min(90vh, 700px);
     }
 
-    .hero-section h1 {
-        /* right: 0; */
-    }
 
     .hero-section .text-wrap {
         bottom: unset;

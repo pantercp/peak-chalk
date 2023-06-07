@@ -1,0 +1,70 @@
+/* -----Hero Section------ */
+
+.hero-section {
+    background-image: url(../images/fingerprint.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position: 80% 50%;
+    height: min(80vh, 700px);
+    position: relative;
+}
+
+.hero-section .text-wrap{
+    position: absolute;
+    width: min(430px, 38vw);
+    bottom: 5%;
+    right: 2%;
+    color: var(--peak-w);
+}
+
+.hero-section .text-wrap h1{
+    margin-bottom: 1rem;
+    font-size: var(--step-1);
+    display: inline-block;
+    background-color: rgba(0,0,0,0.3);
+    padding: 0.25rem 0.5rem;
+    position: relative;
+}
+.hero-section .text-wrap h1::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--peak-p);
+    bottom: 0;
+    left: 0;
+}
+
+.hero-section .text-wrap p{
+    text-align: justify;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.hero-section .text-wrap p::before{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: var(--peak-p);
+    top: 0;
+    left: 0;
+}
+
+
+@media only screen and (max-width: 650px) {
+
+    .hero-section {
+        background-image: url(../images/fingerprint-mob.jpg);
+        background-position: 50% 50%;
+    }
+
+    .hero-section .text-wrap{
+        position: absolute;
+        width: 90%;
+        bottom: 5%;
+        left: 5%;
+        color: var(--peak-w);
+    }
+}

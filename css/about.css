@@ -59,7 +59,8 @@
 .about-section {
     background-image: url(../images/peaked.jpg);
     height: fit-content;
-    min-height: 400px;
+    min-height: 490px;
+    background-size: cover;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -79,32 +80,22 @@
 .about-header h2{
     font-size: var(--step-2);
     padding: 0.25rem;
-    margin-block: 1rem;
+    margin-block: 2rem;
     text-align: center;
-    color: var(--peak-p);
+    color: var(--peak-w);
     position: relative;
+    background: rgba(0,0,0,0.2);
+    border-radius: 0.15rem;
 }
 
-.about-header h2::before{
-    content: '';
-    position: absolute;
-    background: var(--peak-w);
-    height: 3px;
-    width: 100%;
-    bottom: 0%;
-    left: 0%;
-}
 
 .about-wrapper {
     max-width: 500px;
     margin: 1rem;
-    background-color: rgba(235, 235, 235, 0.6);
+    background-color: rgba(235, 235, 235, 0.8);
     padding: 1rem;
     border-radius: 0.5rem;
     border: 1px solid var(--peak-p);
-    /* border-bottom: 2px solid var(--peak-g); */
-    /* box-shadow: 0.3rem 0.3em 0.5rem rgb(23, 42, 58, 0.2); */
-    /* border-right: 2px solid var(--peak-g); */
 }
 
 .about-wrapper h3 {
@@ -117,6 +108,7 @@
     padding-left: 1rem;
     position: relative;
     text-align: justify;
+    font-size: var(--step--1);
 }
 
 .about-wrapper p::before {
@@ -127,11 +119,4 @@
     height: 90%;
     width: 2px;
     background: var(--peak-g);
-}
-
-@media only screen and (max-width: 350px) {
-
-    .about-header h2::before{
-        display: none;
-    }
 }

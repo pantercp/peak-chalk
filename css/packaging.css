@@ -88,7 +88,7 @@
 
 .packaging-section h2 {
     margin: 1rem;
-    font-size: var(--step-3);
+    font-size: min(3rem, var(--step-3));
     text-align: center;
     color: var(--peak-g);
 }

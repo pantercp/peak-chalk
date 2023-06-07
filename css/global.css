@@ -391,10 +391,9 @@ button.fill-in.purple {
         margin: 0;
         padding: 0.1rem 1rem;
         font-size: 1.5rem;
-        transition: all 0.5s ease-in;
     }
 
-    .nav-bar.open .socials li {
+    .nav-bar .socials li {
         width: 50%;
     }
 

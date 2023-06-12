@@ -20,7 +20,23 @@
 
 /* -----Mission Section------ */
 
+.full-banner{
+    width: 100%;
+    position: relative;
+}
+
+.full-banner.light-green{
+    background-color: var(--peak-g-l);
+}
+
+.full-banner.light-purple{
+    background-color: var(--peak-p-l);
+}
+
+
+
 .mission-section {
+    color: var(--peak-g);
     padding: 2rem 1rem;
     max-width: 600px;
     margin-inline: auto;
@@ -124,7 +140,6 @@
 .product-container {
     background-image: url(images/fine.jpg);
     position: relative;
-    margin-block: 1rem;
     min-height: 500px;
     background-position: 45% 42%;
     background-size: cover;
@@ -208,8 +223,8 @@
 
 .section-values {
     text-align: center;
-    padding: 1rem;
-    margin: 1rem 0;
+    padding: 2rem;
+    margin: 0;
     color: var(--peak-g);
 }
 

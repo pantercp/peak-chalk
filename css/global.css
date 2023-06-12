@@ -14,7 +14,9 @@ html {
     --text: #000;
     --background: #fff;
     --peak-g: #618C4C;
+    --peak-g-l: #f0ffe9;
     --peak-p: #673065;
+    --peak-p-l: #fedbfd;
     --peak-w: #FDFFFC;
 }
 

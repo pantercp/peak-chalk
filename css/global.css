@@ -56,7 +56,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.2);
     top: 0;
     z-index: 999;
     transition: all 0.25s ease-in;
@@ -102,6 +102,11 @@ a:hover {
 .list-container .socials i:hover {
     color: var(--peak-g);
 }
+
+.nav-container li.open::after {
+    width: 100%;
+}
+
 
 
 
@@ -200,14 +205,14 @@ button.fill-in.light {
 }
 
 button.fill-in.purple {
-    color: var(--peak-p);
-    background-color: var(--peak-w);
+    color: var(--peak-w);
+    background-color: var(--peak-p);
     border: 2px solid var(--peak-p);
 
     &:hover,
     &:focus {
-        box-shadow: inset 0 0 0 2em var(--peak-p);
-        color: var(--peak-w);
+        box-shadow: inset 0 0 0 2em var(--peak-w);
+        color: var(--peak-p);
     }
 }
 
@@ -234,7 +239,11 @@ button.fill-in.purple {
     background-color: #bab7b7;
 }
 
-.company-container {
+.footer-container a {
+    color: var(--peak-p);
+}
+
+.peak-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -242,7 +251,7 @@ button.fill-in.purple {
     color: #000;
 }
 
-.company-container .contain-logo {
+.peak-container .contain-logo {
     height: 200px;
     margin-top: 1rem;
     text-align: center;
@@ -252,27 +261,27 @@ button.fill-in.purple {
     height: 100%;
 }
 
-.company-container .contain-info {
+.peak-container .contain-info {
     padding: 1rem;
     text-align: center;
 }
 
-.company-container .contain-info p {
+.peak-container .contain-info p {
     margin: 0.25rem 0;
 }
 
-.company-container .contain-info i {
+.peak-container .contain-info i {
     margin: 0.25rem 0.75rem;
     font-size: 1.5rem;
 }
 
 
-.company-container .contain-info h3 {
+.peak-container .contain-info h3 {
     margin: 0.7rem 0 0;
     font-size: 1.2rem;
 }
 
-.company-container .contain-info p.company {
+.peak-container .contain-info p.company {
     font-size: 0.8rem;
 }
 
@@ -355,6 +364,19 @@ button.fill-in.purple {
 
 @media only screen and (max-width: 750px) {
 
+    .nav-container nav {
+        background: transparent;
+    }
+
+    .nav-container li.open::after {
+        width: 0%;
+    }
+
+    .nav-container li.open {
+        color: var(--peak-g);
+    }
+
+
     /* ------Burger and Drop Menu------ */
 
     .menu-btn {
@@ -365,7 +387,7 @@ button.fill-in.purple {
         position: absolute;
         right: -150px;
         top: 70px;
-        transition: all 0.5s ease-in;
+        transition: all 0.35s ease-in;
     }
 
     .nav-bar.open .list-container {

@@ -16,6 +16,19 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
+// Page Finder
+
+const pageFinder = document.querySelector(".page-finder");
+const pageList = document.querySelector(".drop-list").children;
+
+document.addEventListener('DOMContentLoaded', function() {
+   for(pageItem of pageList){
+    if(pageFinder.id == pageItem.innerText){
+      pageItem.classList.add("open")
+    }
+   }
+}, false);
+
 // Intersection For Header
 
 const header = document.querySelector("#header");
@@ -123,3 +136,21 @@ let displayTestimonial = () => {
   `;
 };
 window.onload = displayTestimonial;
+
+// Counter for trees
+
+let valueDisplays = document.querySelectorAll(".num-count");
+let interval = 10000;
+
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(function () {
+    startValue += 1;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});

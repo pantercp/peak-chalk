@@ -25,14 +25,6 @@
     position: relative;
 }
 
-.full-banner.light-green{
-    background-color: var(--peak-g);
-}
-
-.full-banner.light-purple{
-    background-color: var(--peak-p);
-}
-
 .mission-section {
     color: var(--peak-g);
     padding: 2rem 1rem;

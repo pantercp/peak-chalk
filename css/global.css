@@ -385,10 +385,12 @@ button.fill-in.purple {
     font-size: 1em;
 }
 
-
+/* ---------Footer-Pay&Copyright-------- */
 
 .pay-copyright{
     display: flex;
+    background-color: #bab7b7;
+    color: #000;
     align-items: center;
     justify-content: space-around;
 }

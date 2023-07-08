@@ -261,25 +261,51 @@ button.fill-in.purple {
     height: 100%;
 }
 
+.peak-container .contain-info p {
+    margin: 0.25rem 0;
+}
+
+.peak-container p.peak{
+    font-style: italic;
+}
+
+.peak-container .contain-info ul{
+    list-style: none;
+    display: flex;
+}
+
+.peak-container .contain-info li{
+    margin: 0.5rem;
+}
+
+.peak-container .contain-info li.pseudo::after{
+    content: '';
+    position: relative;
+    display: inline-block;
+    background: #673065;
+    width: 2px;
+    height: 1rem;
+    top: 2px;
+    right: -8px;
+}
+
+.peak-container .contain-info li.last::after{
+    background: transparent;
+}
+
+
+
 .peak-container .contain-info {
     padding: 1rem;
     text-align: center;
 }
 
-.peak-container .contain-info p {
-    margin: 0.25rem 0;
-}
 
 .peak-container .contain-info i {
     margin: 0.25rem 0.75rem;
     font-size: 1.5rem;
 }
 
-
-.peak-container .contain-info h3 {
-    margin: 0.7rem 0 0;
-    font-size: 1.2rem;
-}
 
 .peak-container .contain-info p.company {
     font-size: 0.8rem;

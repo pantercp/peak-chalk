@@ -265,20 +265,20 @@ button.fill-in.purple {
     margin: 0.25rem 0;
 }
 
-.peak-container p.peak{
+.peak-container p.peak {
     font-style: italic;
 }
 
-.peak-container .contain-info ul{
+.peak-container .contain-info ul {
     list-style: none;
     display: flex;
 }
 
-.peak-container .contain-info li{
+.peak-container .contain-info li {
     margin: 0.5rem;
 }
 
-.peak-container .contain-info li.pseudo::after{
+.peak-container .contain-info li.pseudo::after {
     content: '';
     position: relative;
     display: inline-block;
@@ -289,7 +289,7 @@ button.fill-in.purple {
     right: -8px;
 }
 
-.peak-container .contain-info li.last::after{
+.peak-container .contain-info li.last::after {
     background: transparent;
 }
 
@@ -383,6 +383,26 @@ button.fill-in.purple {
 
 .cjpixel-content a {
     font-size: 1em;
+}
+
+
+
+.pay-copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul.payment-list{
+    list-style: none;
+}
+
+.payment-list {
+    display: flex;
+}
+
+.payment-list li{
+    margin: 0.5rem;
 }
 
 

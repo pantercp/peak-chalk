@@ -235,12 +235,12 @@ button.fill-in.purple {
 
 .footer-container {
     margin: 0 0 0 0;
-    padding: 1rem;
-    background-color: #bab7b7;
+    padding: 0.5rem;
+    background-color: #5d5959;
 }
 
 .footer-container a {
-    color: var(--peak-p);
+    color: #fff;
 }
 
 .peak-container {
@@ -309,6 +309,22 @@ button.fill-in.purple {
 
 .peak-container .contain-info p.company {
     font-size: 0.8rem;
+}
+
+.peak-container .contain-links{
+    text-align: left;
+}
+
+.peak-container .contain-links h3{
+    margin-bottom: 0.5rem;
+}
+
+.peak-container .contain-links ul{
+    list-style: none;
+}
+
+.peak-container .contain-links li{
+    margin-bottom: 0.25rem;
 }
 
 /* -----CJPixel Footer------ */
@@ -389,10 +405,14 @@ button.fill-in.purple {
 
 .pay-copyright{
     display: flex;
-    background-color: #bab7b7;
+    flex-wrap: wrap;
+    background-color: #5d5959;
     color: #000;
     align-items: center;
     justify-content: space-around;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-top: 1px solid #000;
 }
 
 ul.payment-list{

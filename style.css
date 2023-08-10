@@ -369,6 +369,7 @@ button#prev {
 .liquid-chalk-section img{
     max-width: 300px;
     border-radius: 1rem;
+    margin: 1rem;
 }
 
 .liquid-chalk-section .info-wrapper{

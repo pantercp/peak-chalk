@@ -362,6 +362,7 @@ button#prev {
 .liquid-chalk-section .banner-wrapper{
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     max-width: 1000px;
     margin-inline: auto;
 }
@@ -394,6 +395,21 @@ button#prev {
 .liquid-chalk-section button{
     margin-block: 1rem;
 }
+
+@media only screen and (max-width: 650px) {
+
+    .liquid-chalk-section .banner-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .liquid-chalk-section img{
+        max-width: min(90%,300px);
+    }
+
+}
+
+
+
 
 
 @media only screen and (max-width: 750px) {

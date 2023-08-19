@@ -352,14 +352,14 @@ button#prev {
     }
 }
 
-/* -------Liquid------- */
+/* -------Product & Liquid------- */
 
-.liquid-chalk-section{
+.product-chalk-section{
     margin-block: 2rem;
     color: var(--peak-g);
 }
 
-.liquid-chalk-section .banner-wrapper{
+.product-chalk-section .banner-wrapper{
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -367,13 +367,13 @@ button#prev {
     margin-inline: auto;
 }
 
-.liquid-chalk-section img{
+.product-chalk-section img{
     max-width: 300px;
     border-radius: 1rem;
     margin: 1rem;
 }
 
-.liquid-chalk-section .info-wrapper{
+.product-chalk-section .info-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -382,32 +382,49 @@ button#prev {
     text-align: center;
 }
 
-.liquid-chalk-section h2{
+.product-chalk-section h2{
     text-align: center;
     font-size: 3rem;
 }
 
-.liquid-chalk-section p{
+.product-chalk-section p{
     margin-block: 1rem;
     text-align: justify;
 }
 
-.liquid-chalk-section button{
+.product-chalk-section button{
     margin-block: 1rem;
+}
+
+.product-chalk-section li{
+    list-style-type: disclosure-closed;
+    text-align: left;
+    margin-inline-start: 1rem;
+
 }
 
 @media only screen and (max-width: 650px) {
 
-    .liquid-chalk-section .banner-wrapper{
+    .product-chalk-section .banner-wrapper{
         flex-wrap: wrap;
     }
 
-    .liquid-chalk-section img{
+    .product-chalk-section img{
         max-width: min(90%,300px);
     }
 
 }
 
+/* -------Chunky------- */
+
+.chunky-chalk-section h2{
+    margin-bottom: 1rem;
+}
+
+.chunky-chalk-section h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
 
 
 

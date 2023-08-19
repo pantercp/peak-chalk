@@ -385,6 +385,13 @@ button#prev {
 .product-chalk-section h2{
     text-align: center;
     font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.product-chalk-section h3{
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 100;
 }
 
 .product-chalk-section p{
@@ -400,7 +407,12 @@ button#prev {
     list-style-type: disclosure-closed;
     text-align: left;
     margin-inline-start: 1rem;
+}
 
+.product-chalk-section .purchase-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media only screen and (max-width: 650px) {
@@ -413,17 +425,6 @@ button#prev {
         max-width: min(90%,300px);
     }
 
-}
-
-/* -------Chunky------- */
-
-.chunky-chalk-section h2{
-    margin-bottom: 1rem;
-}
-
-.chunky-chalk-section h3{
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
 }
 
 

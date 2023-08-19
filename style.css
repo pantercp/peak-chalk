@@ -352,11 +352,11 @@ button#prev {
     }
 }
 
-/* -------Product & Liquid------- */
+/* -------Product Section------- */
 
 .product-chalk-section{
     margin-block: 2rem;
-    color: var(--peak-g);
+    color: black;
 }
 
 .product-chalk-section .banner-wrapper{
@@ -385,7 +385,7 @@ button#prev {
 .product-chalk-section h2{
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .product-chalk-section h3{
@@ -413,6 +413,45 @@ button#prev {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.liquid-chalk-section{
+    color: #35a6d0;
+}
+
+.chunky-chalk-section{
+    color: var(--peak-p);
+}
+
+.fine-chalk-section{
+    color: var(--peak-g);
+}
+
+.product-chalk-section p.liquid {
+    color: #35a6d0;
+    margin-block: 1rem;
+    text-align: justify;
+    padding: 1rem;
+    border: 1px solid #35a6d0;
+    border-radius: 1rem;
+}
+
+.product-chalk-section p.chunky {
+    color: var(--peak-p);
+    margin-block: 1rem;
+    text-align: justify;
+    padding: 1rem;
+    border: 1px solid var(--peak-p);
+    border-radius: 1rem;
+}
+
+.product-chalk-section p.fine {
+    color: var(--peak-g);
+    margin-block: 1rem;
+    text-align: justify;
+    padding: 1rem;
+    border: 1px solid var(--peak-g);
+    border-radius: 1rem;
 }
 
 @media only screen and (max-width: 650px) {

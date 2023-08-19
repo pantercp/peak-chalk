@@ -228,6 +228,18 @@ button.fill-in.green {
     }
 }
 
+button.fill-in.blue {
+    color: var(--peak-w);
+    background-color: #35a6d0;
+    border: 2px solid #35a6d0;
+
+    &:hover,
+    &:focus {
+        box-shadow: inset 0 0 0 2em var(--peak-w);
+        color: #35a6d0;
+    }
+}
+
 
 
 /* ------Fader Animation----- */

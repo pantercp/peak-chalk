@@ -362,7 +362,7 @@ button#prev {
 .product-chalk-section .banner-wrapper{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     max-width: 1000px;
     margin-inline: auto;
 }
